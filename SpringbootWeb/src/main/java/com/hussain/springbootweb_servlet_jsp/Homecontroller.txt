@@ -1,0 +1,42 @@
+SOME IMPORTANT CONCEPTS ABOUT @ModelAttribute
+In Spring MVC, @ModelAttribute is used to bind form data from the HTML form
+directly to a Java object.
+When you submit a form in a web application, the data from the form fields
+(like text boxes, checkboxes, etc.) needs to be captured and processed by
+the server. @ModelAttribute helps with this process by automatically mapping the form data to properties of a Java object.
+
+@Controller
+public class HomeController {
+
+	@ModelAttribute("course")
+	public String courseName() {
+		return "Java";
+	}
+
+
+	@RequestMapping("/")
+	public String home() {
+		// System.out.println("Home method called");
+		return "index";
+	}
+
+	@RequestMapping("add")
+	public ModelAndView add(@RequestParam("num1") int num1, @RequestParam("num2") int num2, ModelAndView mv) {
+
+		int result = num1 + num2;
+		mv.addObject("result",result);
+		mv.setViewName("result");
+
+		return mv;
+	}
+
+
+
+	@RequestMapping("addAlien")
+	public String addAlien(Alien alien) {
+	//public String addAlien(@ModelAttribute("alien1") Alien alien) {
+
+		return "result";
+	}
+
+}
