@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean id="Alien1" class="com.example.springxml.Alien" scope="prototype">-->
+<!--    </bean>-->
+
+    <!--<bean id="alien1" class="com.springxml.Alien" autowire="byType"> -->
+    <bean id="Alien1" class="com.example.springxml.Alien" autowire="byName">
+<!--        when you are using property it means you are wiring with Alien class with this spring.xml-->
+<!--        but if you want to do automatically then use "AUTOWIRE" with the help of byName means "com" is in Alien and in bean id  -->
+<!--        <property name="com" ref="lap1"/>-->
+
+
+
+
+<!--    constructor injection (index is used to check assign sequence order of parameter)-->
+
+        <!--	<constructor-arg value="21"></constructor-arg>
+                <constructor-arg ref="lap1"></constructor-arg> -->
+
+        <!--	<constructor-arg type="com.telusko.Laptop" ref="lap1"/>
+                <constructor-arg type="int" value="21"/> -->
+
+        <!--	<constructor-arg index="1" ref="lap1"/>
+                <constructor-arg index="0" value="21"/> -->
+
+        <!--	<constructor-arg name="lap" ref="lap1"/>
+                <constructor-arg name="age" value="21"/> -->
+
+    </bean>
+
+
+<!--    no matter how many bean you have created only id should be different in ref-->
+    <bean id="com" class="com.example.springxml.Laptop" primary="true">
+<!--        when spring is confused which beans should select then use primary . This is used when use autowire="byName"-->
+<!--        but if we explicitly define in property as in  ref value so it will access that bean only even you use primary ...here autowire used byType -->
+<!--        <property name="com" ref="lap1"/>   defined below autowire -->
+
+    </bean>
+
+    <bean id="desk" class="com.example.springxml.Desktop" lazy-init="true">
+    </bean>
+<!--    lazy int is used when we don't want to create object by default because may be-->
+<!--    there are hundreds of beans so all create its object when app start so it will -->
+<!--    reduce speed-->
+
+</beans>
+
+<!--        the Alien bean is declared in XML, which Spring loads and manages.-->
+<!--        When your application runs, Spring will create an instance of Alien according -->
+<!--        to the configuration in the XML file.-->
+
+<!--        <property> this is setter injection means we are assigning value using getter and setter to a variable-->
+
