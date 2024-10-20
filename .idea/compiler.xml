@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="javabasedconfig" />
+        <module name="SpringbootWeb_servlet_jsp" />
+        <module name="SpringbootApp" />
+        <module name="SpringDataJPA" />
+        <module name="SpringJDBC" />
+        <module name="Springbootrest" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="SpringDataJPA" options="-parameters" />
+      <module name="SpringJDBC" options="-parameters" />
+      <module name="SpringbootApp" options="-parameters" />
+      <module name="SpringbootWeb_servlet_jsp" options="-parameters" />
+      <module name="Springbootrest" options="-parameters" />
+      <module name="javabasedconfig" options="-parameters" />
+    </option>
+  </component>
+</project>
