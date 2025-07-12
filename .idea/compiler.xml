@@ -7,27 +7,42 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="javabasedconfig" />
         <module name="SpringbootWeb_servlet_jsp" />
+        <module name="Springbootrest" />
+        <module name="javabasedconfig" />
         <module name="SpringbootApp" />
         <module name="SpringDataJPA" />
         <module name="SpringJDBC" />
-        <module name="Springbootrest" />
       </profile>
       <profile name="Annotation profile for TheHPortfolio" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
         </processorPath>
         <module name="TheHPortfolio" />
       </profile>
+      <profile name="Annotation profile for question-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+        </processorPath>
+        <module name="question-service" />
+        <module name="Quizapp (1)" />
+      </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="question_service" target="17" />
+      <module name="Quizapp" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Quizapp" options="-parameters" />
+      <module name="Quizapp (1)" options="-parameters" />
       <module name="SpringDataJPA" options="-parameters" />
       <module name="SpringJDBC" options="-parameters" />
       <module name="SpringbootApp" options="-parameters" />
@@ -35,6 +50,7 @@
       <module name="Springbootrest" options="-parameters" />
       <module name="TheHPortfolio" options="-parameters" />
       <module name="javabasedconfig" options="-parameters" />
+      <module name="question-service" options="-parameters" />
     </option>
   </component>
 </project>
