@@ -14,6 +14,10 @@
         <option value="$PROJECT_DIR$/Quizapp/pom.xml" />
         <option value="$PROJECT_DIR$/question_service/pom.xml" />
         <option value="$PROJECT_DIR$/question-service/pom.xml" />
+        <option value="$PROJECT_DIR$/quiz-service[MicroServices]/pom.xml" />
+        <option value="$PROJECT_DIR$/quiz-service/pom.xml" />
+        <option value="$PROJECT_DIR$/service-registry/pom.xml" />
+        <option value="$PROJECT_DIR$/API-Gateway/pom.xml" />
       </list>
     </option>
   </component>
